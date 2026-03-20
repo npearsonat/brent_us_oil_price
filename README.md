@@ -54,16 +54,6 @@ Analysis is performed in a **Python / Jupyter notebook** using SQL queries via `
 
 ---
 
-## Analysis & Findings
-
-**Rockets & Feathers** — Month-over-month changes in Brent plotted against month-over-month changes in pump price, broken into quadrants. The slope when crude rises is steeper than when crude falls — consistent with asymmetric pass-through. This replicates and extends findings from the [St. Louis Fed FRED Blog](https://fredblog.stlouisfed.org).
-
-**Lag Correlation Analysis** — Cross-correlation of monthly Brent changes against pump price changes reveals a ~2 month lag — crude price movements take approximately two months to fully transmit to the retail pump.
-
-**Shock Comparison (2008 / 2022 / 2026)** — Each shock is indexed to its pre-shock baseline and percentage changes are compared across shocks to quantify magnitude and speed of transmission.
-
----
-
 ## Tech Stack
 
 - **Python** — pandas, matplotlib, sqlite3
@@ -71,16 +61,12 @@ Analysis is performed in a **Python / Jupyter notebook** using SQL queries via `
 - **Jupyter Notebook** — analysis and documentation
 - **EIA Open Data API** — primary data source
 
----
-
 ## References
 
-- St. Louis Fed FRED Blog — *Rockets and Feathers* (asymmetric price transmission)
-- EIA — *This Week in Petroleum* and historical shock analyses
-- World Bank — *What Explains Global Inflation* (oil shocks and pass-through)
+- St. Louis Fed FRED Blog — *Rockets and Feathers* (https://fredblog.stlouisfed.org/2022/06/oil-and-gas-prices-move-together-like-rockets-and-feathers/)
+- EIA — *This Week in Petroleum* and historical shock analyses (https://www.eia.gov/petroleum/weekly/)
+- World Bank — *What Explains Global Inflation* (https://www.worldbank.org/en/research/brief/global-inflation)
 - IMF — oil price shock and inflation impact estimates
-
----
 
 ## Getting Started
 
