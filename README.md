@@ -1,8 +1,7 @@
 # Brent Crude & U.S. Retail Gas Price Analysis
 
-An end-to-end data analysis project examining how global oil price shocks transmit to U.S. consumer pump prices, with a focus on speed, magnitude, and asymmetry across three major geopolitical events.
+I was inspired to make this project in response to oil shocks resulting from the US involvment in Iran. The oil market is a global market and it is said that supply changes in one location can impact supply everywhere. In the 1970s, the US was a net importer of oil and was hit very hard by the OPEC embargo. Since then, they have managed to diversify their oil sources and have become a net exporter with the help of technological advancements in techniques such as fracking. With the distance in mind, I researched the impact of more recent oil shocks to see how the American oil market was impatced by global oil price fluctations. I am not trying to predict the price of oil, but merely tracking the impact that brent 
 
----
 
 ## Project Overview
 
