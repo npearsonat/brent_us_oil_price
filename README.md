@@ -4,8 +4,6 @@ I was inspired to make this project in response to oil shocks resulting from the
 
 This project investigates the relationship between Brent crude oil prices and U.S. retail gasoline prices from 1987 to 2026. Drawing on frameworks from the St. Louis Fed, EIA, and IMF, it applies a consistent methodology across three geopolitical shocks: 2008 financial crisis, 2022 Ukraine war, and the 2026 Iran conflict. It compares how each shock transmitted to the consumer pump price.
 
-A key focus is the **rockets and feathers** phenomenon: the well-documented asymmetry where pump prices rise faster when crude rises than they fall when crude drops.
-
 ## Guiding Questions
 
 - How closely does U.S. retail gas track Brent crude over time?
@@ -20,14 +18,12 @@ A key focus is the **rockets and feathers** phenomenon: the well-documented asym
 | U.S. retail regular gasoline (weekly) | [EIA Open Data API](https://www.eia.gov/opendata/) | 1990 – 2026 |
 | Brent crude spot price (monthly) | [EIA — Series RBRTE](https://www.eia.gov/opendata/) | 1987 – 2026 |
 
-> **Why Brent and not WTI?** After 2010, WTI diverged from Brent due to transportation bottlenecks at Cushing, Oklahoma — lower WTI prices did not result in lower U.S. gas prices. EIA research confirms that Brent is the stronger predictor of U.S. retail pump prices, so it was chosen as the crude benchmark throughout this analysis.
-
----
-
-## Visualizations
+## Visuals
 
 ### U.S. Retail Gas vs Brent Crude
 ![US Retail Gas vs Brent](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/us_retail_gas_vs_brent.png)
+
+Time series of U.S. pump prices and Brent crude, annotated with key shock events (2008, COVID, Ukraine War, Iran 2026).
 
 ### U.S. Gas vs Brent — Annotated
 ![US Gas vs Brent](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/us_gas_vs_brent.png)
@@ -35,13 +31,17 @@ A key focus is the **rockets and feathers** phenomenon: the well-documented asym
 ### Retail-to-Crude Ratio
 ![US Retail Crude Ratio](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/us_retail_crude_ratio.png)
 
+The pump-to-Brent ratio (adjusted to a per-barrel basis using the 42-gallon conversion) tracks what fraction of crude cost passes through to consumers. The ratio typically sits above 1.0, reflecting refining, distribution, and taxes layered on top of crude.
+
 ### Rockets & Feathers
 ![Rockets and Feathers](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/rockets_and_feathers.png)
+
+Month-over-month changes in Brent plotted against month-over-month changes in pump price, broken into quadrants. The slope when crude rises is steeper than when crude falls — consistent with asymmetric pass-through. This replicates and extends findings from the [St. Louis Fed FRED Blog](https://fredblog.stlouisfed.org).
 
 ### Correlation Between Brent & U.S. Prices
 ![Correlation Between Brent and US Prices](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/corr_between_brent%2Bus_prices.png)
 
----
+Cross-correlation of monthly Brent changes against pump price changes reveals a ~2 month lag — crude price movements take approximately two months to fully transmit to the retail pump.
 
 ## Methodology
 
@@ -55,10 +55,6 @@ Analysis is performed in a **Python / Jupyter notebook** using SQL queries via `
 ---
 
 ## Analysis & Findings
-
-**Price Trend Overview** — Time series of U.S. pump prices and Brent crude, annotated with key shock events (2008, COVID, Ukraine War, Iran 2026).
-
-**Retail-to-Crude Ratio** — The pump-to-Brent ratio (adjusted to a per-barrel basis using the 42-gallon conversion) tracks what fraction of crude cost passes through to consumers. The ratio typically sits above 1.0, reflecting refining, distribution, and taxes layered on top of crude.
 
 **Rockets & Feathers** — Month-over-month changes in Brent plotted against month-over-month changes in pump price, broken into quadrants. The slope when crude rises is steeper than when crude falls — consistent with asymmetric pass-through. This replicates and extends findings from the [St. Louis Fed FRED Blog](https://fredblog.stlouisfed.org).
 
