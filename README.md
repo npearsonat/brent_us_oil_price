@@ -18,7 +18,7 @@ This project investigates the relationship between Brent crude oil prices and U.
 | U.S. retail regular gasoline (weekly) | [EIA Open Data API](https://www.eia.gov/opendata/) | 1990 – 2026 |
 | Brent crude spot price (monthly) | [EIA — Series RBRTE](https://www.eia.gov/opendata/) | 1987 – 2026 |
 
-## Visuals
+## Analysis And Visuals
 
 ### U.S. Retail Gas vs Brent Crude
 ![US Retail Gas vs Brent](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/us_retail_gas_vs_brent.png)
