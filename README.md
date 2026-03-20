@@ -2,23 +2,16 @@
 
 I was inspired to make this project in response to oil shocks resulting from the US involvment in Iran. The oil market is a global market and it is said that supply changes in one location can impact supply everywhere. In the 1970s, the US was a net importer of oil and was hit very hard by the OPEC embargo. Since then, they have managed to diversify their oil sources and have become a net exporter with the help of technological advancements in techniques such as fracking. With the distance in mind, I researched the impact of more recent oil shocks to see how the American oil market was impatced by global oil price fluctations. I am not trying to predict the price of oil, but merely tracking the impact that brent 
 
-
-## Project Overview
-
-This project investigates the relationship between Brent crude oil prices and U.S. retail gasoline prices from 1987 to 2026. Drawing on frameworks from the St. Louis Fed, EIA, and IMF, it applies a consistent methodology across three geopolitical shocks — **2008 financial crisis**, **2022 Ukraine war**, and the **2026 Iran conflict** — to compare how each shock transmitted to the consumer pump price.
+This project investigates the relationship between Brent crude oil prices and U.S. retail gasoline prices from 1987 to 2026. Drawing on frameworks from the St. Louis Fed, EIA, and IMF, it applies a consistent methodology across three geopolitical shocks: 2008 financial crisis, 2022 Ukraine war, and the 2026 Iran conflict. It compares how each shock transmitted to the consumer pump price.
 
 A key focus is the **rockets and feathers** phenomenon: the well-documented asymmetry where pump prices rise faster when crude rises than they fall when crude drops.
 
----
-
-## Key Questions
+## Guiding Questions
 
 - How closely does U.S. retail gas track Brent crude over time?
 - What fraction of a crude price increase passes through to consumers (and how quickly)?
 - Do prices rise faster than they fall — and has this asymmetry changed across shocks?
 - How does the 2026 Iran shock compare in speed and magnitude to 2008 and 2022?
-
----
 
 ## Data Sources
 
