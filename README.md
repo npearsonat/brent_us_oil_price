@@ -21,22 +21,24 @@ This project investigates the relationship between Brent crude oil prices and U.
 ## Analysis And Visuals
 
 ### U.S. Retail Gas vs Brent Crude
-![US Retail Gas vs Brent](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/us_retail_gas_vs_brent.png)
+![US Retail Gas vs Brent](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/us_retail_gas_vs_brent_2.png)
 
-Time series of U.S. pump prices and Brent crude, annotated with key shock events (2008, COVID, Ukraine War, Iran 2026).
-
-### U.S. Gas vs Brent — Annotated
-![US Gas vs Brent](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/us_gas_vs_brent.png)
+Time series of U.S. pump prices and Brent crude, annotated with key shock events (2008, COVID, Ukraine War, Iran 2026). Visible in this graph is the fact that brent crude and US retail prices appear to be quite closely linked. Over time there has been some separation between the two, but they mostly follow the same trend. The shock events I have examined have lead to dramatic increases and decreases in both markets.  
 
 ### Retail-to-Crude Ratio
 ![US Retail Crude Ratio](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/us_retail_crude_ratio.png)
 
-The pump-to-Brent ratio (adjusted to a per-barrel basis using the 42-gallon conversion) tracks what fraction of crude cost passes through to consumers. The ratio typically sits above 1.0, reflecting refining, distribution, and taxes layered on top of crude.
+The pump-to-Brent ratio (adjusted to a per-barrel basis using the 42-gallon conversion) tracks what fraction of crude cost passes through to consumers. The ratio typically sits above 1.0, reflecting refining, distribution, and taxes layered on top of crude. The keyt takeway from this graph is that the premium that Americans pay for oil and gas is relateively consistent regardless of greater world events. If anything, that premium has been steadily decreased over the past few decades. increases in brent oil prices have not disproportionately affected Americans.
+
+### U.S. Gas vs Brent
+![US Gas vs Brent](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/us_gas_vs_brent.png)
+
+This graph zooms on the shocks and how oil and gas prices recovered from them. It shows how much oil and gas changed from a baseline price right before it occured. With all of these oil shocks, there was a dramatic increase followed by a decrease and a leveling out. It is important to note that this may not necessarily be the case for 2026, but it is how previous oil shocks played out.
 
 ### Rockets & Feathers
-![Rockets and Feathers](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/rockets_and_feathers.png)
+![Rockets and Feathers](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/rockets_and_feathers_2.png)
 
-Month-over-month changes in Brent plotted against month-over-month changes in pump price, broken into quadrants. The slope when crude rises is steeper than when crude falls — consistent with asymmetric pass-through. This replicates and extends findings from the [St. Louis Fed FRED Blog](https://fredblog.stlouisfed.org).
+Month-over-month changes in Brent plotted against month-over-month changes in pump price, broken into quadrants. The slope when crude rises is steeper than when crude falls, consistent with asymmetric pass-through. This replicates and extends findings from the [St. Louis Fed FRED Blog](https://fredblog.stlouisfed.org).This means that the price of oil increases faster than it 
 
 ### Correlation Between Brent & U.S. Prices
 ![Correlation Between Brent and US Prices](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/corr_between_brent%2Bus_prices.png)
