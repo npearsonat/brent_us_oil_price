@@ -5,6 +5,7 @@ I was inspired to make this project in response to oil shocks resulting from the
 This project investigates the relationship between Brent crude oil prices and U.S. retail gasoline prices from 1987 to 2026. Drawing on frameworks from the St. Louis Fed, EIA, and IMF, it applies a consistent methodology across three geopolitical shocks: 2008 financial crisis, 2022 Ukraine war, and the 2026 Iran conflict. It compares how each shock transmitted to the consumer pump price.
 
 **Main Findings**
+
 Cross-correlation analysis reveals an approximate two month lag between Brent price changes and pump price responses, with a slight asymmetry where prices rise marginally faster than they fall. Comparing the 2008 and 2022 shocks shows that in both cases prices rose sharply before recovering, though it remains to be seen whether the 2026 Iran shock will follow the same pattern.
 
 ## Guiding Questions
