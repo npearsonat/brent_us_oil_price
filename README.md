@@ -27,19 +27,19 @@ Queries were done in SQL language using sqlite3 in Google Colab. This example qu
 ```python
 # Query US Brent LAG
 query6 = """
-select*,
-avg_brent - LAG(avg_brent, 1) OVER (ORDER BY year_month) as brent_change_lag1,
-avg_brent - LAG(avg_brent, 2) OVER (ORDER BY year_month) as brent_change_lag2,
-avg_brent - LAG(avg_brent, 3) OVER (ORDER BY year_month) as brent_change_lag3
-from
-(select
-  avg(e.us_regular) as avg_us,
-  avg(b.brent_usd_bbl) as avg_brent,
+SELECT *,
+avg_brent - LAG(avg_brent, 1) OVER (ORDER BY year_month) AS brent_change_lag1,
+avg_brent - LAG(avg_brent, 2) OVER (ORDER BY year_month) AS brent_change_lag2,
+avg_brent - LAG(avg_brent, 3) OVER (ORDER BY year_month) AS brent_change_lag3
+FROM
+(SELECT
+  AVG(e.us_regular) AS avg_us,
+  AVG(b.brent_usd_bbl) AS avg_brent,
   e.year_month
-from eia_us_prices as e
-join brent_crude as b on e.year_month = b.year_month
-where us_regular is not null
-group by e.year_month) as monthly_avg
+FROM eia_us_prices AS e
+JOIN brent_crude AS b ON e.year_month = b.year_month
+WHERE us_regular IS NOT NULL
+GROUP BY e.year_month) AS monthly_avg
 """
 
 result = pd.read_sql_query(query6, conn)
@@ -70,7 +70,7 @@ Month-over-month changes in Brent plotted against month-over-month changes in pu
 ### Correlation Between Brent & U.S. Prices
 ![Correlation Between Brent and US Prices](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/corr_between_brent%2Bus_prices.png)
 
-Cross-correlation of monthly Brent changes against pump price changes reveals a ~2 month lag — crude price movements take approximately two months to fully transmit to the retail pump.
+Cross-correlation of monthly Brent changes against pump price changes reveals a ~2 month lag. Crude price movements take approximately two months to fully transmit to the retail pump. The highest correlation relationship is 2 months by a small margin. A possible explanation for this is some delayed reaction from the US markets and the global market.
 
 ## Methodology
 
@@ -79,7 +79,7 @@ All data is stored in a local **SQLite** database (`energy_prices.db`) with two 
 - `eia_us_prices` — weekly U.S. retail prices
 - `brent_crude` — monthly Brent spot prices
 
-Analysis is performed in a **Python / Jupyter notebook** using SQL queries via `pandas.read_sql_query`, with visualizations built in `matplotlib`. Weekly EIA data is aggregated to monthly averages before joining with Brent to ensure consistent granularity across all analyses.
+Analysis is performed in a Python / Jupyter notebook using SQL queries via `pandas.read_sql_query`, with visualizations built in `matplotlib`. Weekly EIA data is aggregated to monthly averages before joining with Brent to ensure consistent granularity across all analyses.
 
 ---
 
