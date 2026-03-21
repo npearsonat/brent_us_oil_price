@@ -1,8 +1,11 @@
 # Brent Crude & U.S. Retail Gas Price Analysis
 
-I was inspired to make this project in response to oil shocks resulting from the US involvment in Iran. The oil market is a global market and it is said that supply changes in one location can impact supply everywhere. In the 1970s, the US was a net importer of oil and was hit very hard by the OPEC embargo. Since then, they have managed to diversify their oil sources and have become a net exporter with the help of technological advancements in techniques such as fracking. With the distance in mind, I researched the impact of more recent oil shocks to see how the American oil market was impatced by global oil price fluctations. I am not trying to predict the price of oil, but merely tracking the impact that brent 
+I was inspired to make this project in response to oil shocks resulting from the US involvment in Iran. The oil market is a global market and it is said that supply changes in one location can impact supply everywhere. In the 1970s, the US was a net importer of oil and was hit very hard by the OPEC embargo. Since then, they have managed to diversify their oil sources and have become a net exporter with the help of technological advancements in techniques such as fracking. With the distance in mind, I researched the impact of more recent oil shocks to see how the American oil market was impatced by global oil price fluctations. I am not trying to predict the price of oil, but merely tracking the impact that brent. 
 
 This project investigates the relationship between Brent crude oil prices and U.S. retail gasoline prices from 1987 to 2026. Drawing on frameworks from the St. Louis Fed, EIA, and IMF, it applies a consistent methodology across three geopolitical shocks: 2008 financial crisis, 2022 Ukraine war, and the 2026 Iran conflict. It compares how each shock transmitted to the consumer pump price.
+
+**Main Findings**
+Cross-correlation analysis reveals an approximate two month lag between Brent price changes and pump price responses, with a slight asymmetry where prices rise marginally faster than they fall. Comparing the 2008 and 2022 shocks shows that in both cases prices rose sharply before recovering, though it remains to be seen whether the 2026 Iran shock will follow the same pattern.
 
 ## Guiding Questions
 
@@ -55,12 +58,12 @@ Time series of U.S. pump prices and Brent crude, annotated with key shock events
 ### Retail-to-Crude Ratio
 ![US Retail Crude Ratio](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/us_retail_crude_ratio.png)
 
-The pump-to-Brent ratio (adjusted to a per-barrel basis using the 42-gallon conversion) tracks what fraction of crude cost passes through to consumers. The ratio typically sits above 1.0, reflecting refining, distribution, and taxes layered on top of crude. The keyt takeway from this graph is that the premium that Americans pay for oil and gas is relateively consistent regardless of greater world events. If anything, that premium has been steadily decreased over the past few decades. increases in brent oil prices have not disproportionately affected Americans.
+The pump-to-Brent ratio (adjusted to a per-barrel basis using the 42-gallon conversion) tracks what fraction of crude cost passes through to consumers. The ratio typically sits above 1.0, reflecting refining, distribution, and taxes layered on top of crude. The key takeway from this graph is that the premium that Americans pay for oil and gas is relatively consistent regardless of greater world events. If anything, that premium has been steadily decreased over the past few decades. increases in brent oil prices have not disproportionately affected Americans.
 
 ### U.S. Gas vs Brent
 ![US Gas vs Brent](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/us_gas_vs_brent.png)
 
-This graph zooms on the shocks and how oil and gas prices recovered from them. It shows how much oil and gas changed from a baseline price right before it occured. With all of these oil shocks, there was a dramatic increase followed by a decrease and a leveling out. It is important to note that this may not necessarily be the case for 2026, but it is how previous oil shocks played out.
+This graph zooms on the shocks and how oil and gas prices recovered from them. It shows how much oil and gas changed from a baseline price right before it occurred. With all of these oil shocks, there was a dramatic increase followed by a decrease and a leveling out. It is important to note that this may not necessarily be the case for 2026, but it is how previous oil shocks played out.
 
 ### Rockets & Feathers
 ![Rockets and Feathers](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/rockets_and_feathers_2.png)
