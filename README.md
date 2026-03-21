@@ -20,9 +20,7 @@ This project investigates the relationship between Brent crude oil prices and U.
 | U.S. retail regular gasoline (weekly) | [EIA Open Data API](https://www.eia.gov/opendata/) | 1990 – 2026 |
 | Brent crude spot price (monthly) | [EIA — Series RBRTE](https://www.eia.gov/opendata/) | 1987 – 2026 |
 
-## Queries
-
-### Brent Lag Analysis
+## Example Queries
 
 Queries were done in SQL language using sqlite3 in Google Colab. This example query computes 1-, 2-, and 3-month lagged changes in Brent crude prices to measure how long crude price movements take to transmit to the retail pump.
 
