@@ -18,6 +18,33 @@ This project investigates the relationship between Brent crude oil prices and U.
 | U.S. retail regular gasoline (weekly) | [EIA Open Data API](https://www.eia.gov/opendata/) | 1990 – 2026 |
 | Brent crude spot price (monthly) | [EIA — Series RBRTE](https://www.eia.gov/opendata/) | 1987 – 2026 |
 
+## Queries
+
+### Brent Lag Analysis
+
+Queries were done in SQL language using sqlite3 in Google Colab. This example query computes 1-, 2-, and 3-month lagged changes in Brent crude prices to measure how long crude price movements take to transmit to the retail pump.
+
+```python
+# Query US Brent LAG
+query6 = """
+select*,
+avg_brent - LAG(avg_brent, 1) OVER (ORDER BY year_month) as brent_change_lag1,
+avg_brent - LAG(avg_brent, 2) OVER (ORDER BY year_month) as brent_change_lag2,
+avg_brent - LAG(avg_brent, 3) OVER (ORDER BY year_month) as brent_change_lag3
+from
+(select
+  avg(e.us_regular) as avg_us,
+  avg(b.brent_usd_bbl) as avg_brent,
+  e.year_month
+from eia_us_prices as e
+join brent_crude as b on e.year_month = b.year_month
+where us_regular is not null
+group by e.year_month) as monthly_avg
+"""
+
+result = pd.read_sql_query(query6, conn)
+```
+
 ## Analysis And Visuals
 
 ### U.S. Retail Gas vs Brent Crude
@@ -38,7 +65,7 @@ This graph zooms on the shocks and how oil and gas prices recovered from them. I
 ### Rockets & Feathers
 ![Rockets and Feathers](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/rockets_and_feathers_2.png)
 
-Month-over-month changes in Brent plotted against month-over-month changes in pump price, broken into quadrants. The slope when crude rises is steeper than when crude falls, consistent with asymmetric pass-through. This replicates and extends findings from the [St. Louis Fed FRED Blog](https://fredblog.stlouisfed.org).This means that the price of oil increases faster than it 
+Month-over-month changes in Brent plotted against month-over-month changes in pump price, broken into quadrants. The slope when crude rises is steeper than when crude falls, consistent with asymmetric pass-through. This replicates and extends findings from the [St. Louis Fed FRED Blog](https://fredblog.stlouisfed.org).This means that the price of oil in the US increases faster than it decreases with brent. There less of a delay when it comes to US prices adjusting to rising brent. The exact slopes are 41.43 and 39.68. 
 
 ### Correlation Between Brent & U.S. Prices
 ![Correlation Between Brent and US Prices](https://raw.githubusercontent.com/npearsonat/brent_us_oil_price/main/charts/corr_between_brent%2Bus_prices.png)
